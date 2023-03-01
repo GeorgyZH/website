@@ -1,0 +1,31 @@
+﻿@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<section>
+       <div class="form-box">
+           <div class="form-value">
+               <form method="post" asp-controller="handler" asp-action="Check">
+                   <h2>Login</h2>
+                   <div class="inputbox">
+                       <ion-icon  name="mail-outline"></ion-icon>
+                       <input type="email" asp-for="Email" required>
+                       <label>Email</label>
+                   </div>
+                   <div class="inputbox">
+                       <ion-icon  name="lock-closed-outline"></ion-icon>
+                       <input type="password" asp-for="Pass" required>
+                       <label>Password</label>
+                   </div>
+                   <div class="forget">
+                       <label><input type="checkbox">Remember me <a href="#">Forget password</a></label>
+                   </div>
+                   <button type="submit">Log in</button>
+                   <div class="register">
+                       <p><a href="#">Don't have account</a></p>
+                   </div>
+               </form>
+           </div>
+       </div>
+</section>
+
