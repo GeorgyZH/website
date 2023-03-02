@@ -5,11 +5,11 @@
 <section>
        <div class="form-box">
            <div class="form-value">
-               <form method="post" asp-controller="handler" asp-action="Check">
+               <form method="post" asp-controller="Handler" asp-action="Check">
                    <h2>Login</h2>
                    <div class="inputbox">
                        <ion-icon  name="mail-outline"></ion-icon>
-                       <input type="email" asp-for="Email" required>
+                       <input type="text" asp-for="Email" autocomplete="off" required>
                        <label>Email</label>
                    </div>
                    <div class="inputbox">

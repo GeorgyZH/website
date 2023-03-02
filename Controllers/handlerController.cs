@@ -3,19 +3,20 @@ using WebSite.Models;
 
 namespace WebSite.Controllers
 {
-    public class handlerController : Controller
+    public class HandlerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult AfterRegistr()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Check(IndexModel indexModel)
         {
             if (ModelState.IsValid)
-                    return View("AfterRegistr");
+                return Redirect("AfterRegistr");
 
-            return View("AfterRegistr");
+            return Redirect("/");
         }
     }
 }
